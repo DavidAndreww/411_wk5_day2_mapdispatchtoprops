@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AddCar from '../components/AddCar';
-import { addCar } from '../redux/actions';
+import addCar from '../redux/actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -8,3 +8,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 
 }
+
+export default connect(null, mapDispatchToProps)(AddCar)
