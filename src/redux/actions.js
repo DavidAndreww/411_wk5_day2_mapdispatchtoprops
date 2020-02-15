@@ -5,4 +5,11 @@ const addCar = (newCar) => {
   }
 }
 
-export default addCar;
+const removeCar = (index) => {
+  return {
+    type: 'REMOVE_CAR',
+    value: index
+  }
+}
+
+export {addCar, removeCar};
