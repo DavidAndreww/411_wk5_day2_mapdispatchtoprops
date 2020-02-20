@@ -45,7 +45,7 @@ const Dashboard = (props) => {
                         <TableCell>{car["horsepower"]}</TableCell>
                         <TableCell>
                             <DeleteIcon
-                                onClick={props.removeCar}
+                                onClick={() => props.removeCar(car.id)}
                                 className="icon text-red" />
                         </TableCell>
                     </TableRow>

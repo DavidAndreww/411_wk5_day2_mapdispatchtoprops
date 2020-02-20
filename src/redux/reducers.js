@@ -9,7 +9,9 @@ const cars = (state = [], action) => {
       return [...state, action.value];
     case "REMOVE_CAR":
       let newState = [...state];
-      newState.splice(action.value, 1);
+      let findCar = newState.find(x => x.id === action.value)
+      let index = newState.indexOf(findCar)
+      newState.splice(index, 1);
       return newState;
     default:
       return state;
